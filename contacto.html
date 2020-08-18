@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CONTACTO</title>
+	<style>
+		header { 
+			width: 100%; 
+			height: 40px;  
+			padding: 30px; 
+			background-image: url(imagenes/pattern.png) ;
+		}
+		nav { 
+			width: 100%; 
+			height: 35px; 
+			background-color:#37A866; 
+			text-align: center;
+			padding-top: 15px;
+		}
+		input{
+			margin-top: 1em;
+		}
+		a { 
+			color: white; 
+			text-decoration: none; 
+		}
+		a:hover { 
+			text-decoration: 
+			underline; 
+		}
+		form{
+			padding: 2em;
+			border:1px dotted green;
+			width: 20em;
+			text-align: center;
+		}
+		.datos{
+			text-align: left;
+		}
+		.boton_de_envio{
+			border: 1px dotted green;
+			color: white;
+			background-color:#3AA466;
+			width: 20em; 
+			height: 2em;
+		}
+		textarea{
+			width: 20em;
+			height: 10em;
+		}
+		.nombre,.email,.origen{
+			width: 20em;
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<h1 style="margin: 0;"> 
+			<img style="width: 37px; height: 37px; vertical-align: middle;" src="imagenes/logo-camara.png" alt="logo camara"> 
+			FotografiaMe 
+		</h1>
+	</header>
+
+	<nav>
+		<a href="index.html">INICIO</a>  
+		<a href="servicios.html">SERVICIOS</a>
+		<a href="contacto.html"> CONTACTO</a> 
+	</nav>
+
+
+	<h1>Contacto</h1>
+	<form action="codigo.php" method="post">
+		<label class="nombre"><p class="datos">Nombre:</p> 
+			<input type="text" required placeholder="Juan Pedro" name="name" maxlength="20" class="nombre">
+		</label> 
+		
+		<label><p class="datos">Email:</p> 
+			<input type="email" required placeholder="info@miweb.com" name="email" class="email">
+		</label> 
+
+		<label><p class="datos">Edad:</p> 
+			<input type="number" min="10" max="90" name="edad" value="18">
+			
+		</label>
+		
+		<label><p class="datos">Origen:</p>
+			<select name="opcion" value="origen" class="origen">
+				<option value="Sector A">Sector A</option>
+				<option value="Sector B">Sector B</option>
+				<option value="Sector C">Sector C</option>
+			</select>
+		</label>
+		
+		<label><p class="datos">Comentarios:</p>
+			<textarea name="message">
+			</textarea>
+		</label>
+		
+		<label ><p class="datos">Estado Civil:</p>
+			<input type="radio" name="estado" value="casado" required>Casado
+			<input type="radio" name="estado" value="soltero">Soltero <br>
+		</label>
+		
+		<label>Acepta terminos y condiciones
+			<input required checked type="checkbox">
+		</label>
+		
+		<label ><br>
+			<input type="submit" value="Enviar" class="boton_de_envio" name="Boton de envio">
+		</label>
+	</form>
+</body>
+</html>
